@@ -102,11 +102,29 @@ h3 {
 }
 
 .my-portfolio section {
+	position: relative;
 	margin: 16px;
 }
 
 .my-portfolio section:first-child {
 	justify-self: center;
+}
+
+.my-portfolio img {
+	display: block;
+}
+
+#MFCs {
+	position: absolute;
+	width: 321px;
+	margin-left: 446px;
+	margin-top: -182px;
+}
+
+.my-portfolio video {
+	position: absolute;
+	margin-left: 446px;
+	margin-top: -580px;
 }
 
 .my-portfolio p {
