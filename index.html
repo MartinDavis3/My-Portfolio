@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Resume Assignment - Martin Davis</title>
+        <title>My Portfolio - Martin Davis</title>
         <meta name="author" content="Martin Davis">
         <meta charset="UTF-8">
         <meta name="description" content="My-Portfolio">
@@ -14,105 +14,108 @@
         <header>
         </header>
         <main>
-            <h1>My Portfolio</h1>
-            <p>A brief illustration of some of my work.</p>
-            <section>
-                <h2>Combustion CVD</h2>
-                <h3>Introduction</h3>
-                <p>
-                    This work was carried out at the University of Salford and was funded by the European Union Fifth Framework Programme.
-                    I built new equipment for combustion CVD. This was used to deposit thin films of various metal oxides on different substrates by passing appropriate chemical precursors through a flame.
-                </p>
-                <h3>The Software Challenge</h3>
-                <p>
-                    Develop software to allow the user to control the gas flows (propane, oxygen and nitrogen) to the burner with sufficient accuracy an reproducibility to obtain consistent results. It was also important that the user could enter physically and chemically useful parameters such as fuel-oxygen ratio and total gas flow, rather than the less meaningful individual gas flows. To achieve this, digital mass flow controllers (MFCs) were used, connected by a RS-485 interface to a computer running software that I wrote in Visual Basic.
-                </p>
-                <h3>A Problem Encountered</h3>
-                <p>
-                    Commands were sent to the MFCs through the interface buffer which then needed to be switched from send to receive in order to read the rely from the MFCs. This switching needed to occur a precise fraction of a millisecond after the software had sent the command, a delay too short to enable use of the normally available timer in Visual Basic.
-                </p>
-                <h3>The Solution I Found</h3>
-                <p>
-                    I used Windows API calls to access the CPU clock, which had sufficient accuracy to allow the software to switch the interface buffer with the accuracy and precision required.
-                </p>
-                <figure>
-                    <img src="./img/CCVD-Rig.jpg" alt="The combustion CVD rig" Title="Combution CVD Rig" height="auto" width="400">
-                    <img src="./img/CCVD-MFCs.jpg" alt="The combustion CVD rig" Title="Combution CVD Rig" height="auto" width="400">
-                    <!-- <video  loop> -->
-                        <!-- <source="./video/Burner.mpg"></src> -->
-                    <!-- </video> -->
-                    <video autoplay loop src="./video/burner.mp4"></video>
-                </figure>
-                <figcaption>
-                    The combustion CVD rig showing the user input screen. Insets show the MFCs behind the gas control panel and a video of the flame and substrate carriage in operation.
-                </figcaption>
-                <cite>
-                    Growth of Thin Films of Molybdenum and Tungsten Oxides by Combustion Chemical Vapour Deposition using Aqueous Precursor Solutions. M. J. Davis, G. Benito, D. W. Sheel, M. E. Pemble, Adv. Mater., Chem. Vap. Deposition, 2004, 10, 29.
-                </cite>
-            </section>
-            <section>
-                <h3>Spectroscopic Monitoring of a Chemical Reactor</h3>
-                <h3>Introduction</h3>
-                <p>
-                    This work was carried out at the University of Salford and was funded by the European Union BriteEuram Programme.
-                </p>
-                <p>
-                    A technique known as coherent anti-Stokes Raman scattering (CARS) was used to enable measurement of chemical species concentration at precise points in a hot reactor. The used a pair of high powered, pulsed lasers together with photodetectors and signal processing electronics, all interfaced to a computer.
-                </p>
-                <h3>The Software Challenge</h3>
-                <p>
-                    Write software to both control the scanning of the laser wavelength and acquire the data from the signal processing electronics, ensuring that synchronisation between wavelength and signal was maintained.
-                </p>
-                <h3>A Problem Encountered</h3>
-                <p>
-                    I encountered problems with the RS-232 interface used because the standard was poorly defined and communication between the different pieces of equipment did not work.
-                </p>
-                <h3>The Solution I Found</h3>
-                <p>
-                I used a breakout box on the RS-232 line to determine that a handshake line to one of the pieces of equipment needed to be crossed-over.
-                </p>
-                <figure>
-                    <img src="./img/CARS-Rig.jpg" alt="The CARS system" title="CARS System" height="auto" width="400">
-                    <img src="./img/CARS-laser-path.jpg" alt="The laser path through the reactor" title="Laser Path" height="auto" width="400">
-                </figure>
-                <figcaption>
-                    The CARS system showing the lasers, detection module and signal processing electronics. The inset show the laser beam path through the reactor.
-                </figcaption>
-                <figure>
-                </figure>
-                <figcaption>
-                    The spatial distribution of the precursor concentration in the reactor.
-                </figcaption>
-                <cite>
-                    In-Situ Monitoring of Atmospheric Pressure Tin Oxide CVD using Coherent anti-Stokes Raman Scattering. M. J. Davis, M. E. Pemble, J. Phys. IV France, 1999, 9, Pr8-49.
-                </cite>
-            </section>
-            <section>           
-                <h2>Real Time Panning of Panoramic Images</h2>
-                <h3>Introduction</h3>
-                <p>
-                    After a trip to the Grand Canyon and Northern Arizona, I had lots of panoramic images made by stitching together many individual photographs. I found that when trying to show to show these to friends and family the large aspect ratio meant to images lost their visual impression. While software is available to create a video that shows panning across a panoramic image, converting lots of images in this way can be time consuming and the resulting videos take up a lot of storage space.
-                </p>   
-                <h3>The Software Challenge</h3>
-                <p>
-                    I wrote software in VB.NET to enable a slide show to be made and displayed, where any image with an aspect ratio greater than a certain value would be displayed as an image at full-height and then panned in real time.
-                </p>
-                <h3>A Problem Encountered</h3>
-                <p>
-                    I found that panning of a full resolution image was too slow and jerky to be aesthetically acceptable.
-                </p>
-                <h3>The Solution I Found</h3>
-                <p>
-                    I ran the code to produce the panning in a separate thread which I assigned a high priority. Additionally, obtaining the correct part of the image required for each frame, which is the slowest part of the process, was done in the time between frames, copying it to a temporary buffer. This buffer could then be quickly transferred to the screen at the correct frame time. Furthermore, API calls to the internal timer were made to ensure sufficient accuracy and reproducibility of frame timing in order to give smooth panning.
-                </p>
-                <figure>
-                    <img src="./img/Code-Snapshot.PNG" alt="Code Snippet" title="Code Snippet" height="auto" width="400">
-                </figure>
-                <figcaption>
-                    A section of the code, showing the high priority thread, timing calls and frame buffer use.
-                </figcaption>
-            </section> 
-        </main>
+            <article class="my-portfolio">
+                <section>
+                    <h1>My Portfolio</h1>
+                    <p>A brief illustration of some of my work.</p>
+                </section>
+                <section>
+                    <h2>Combustion CVD</h2>
+                    <h3>Introduction</h3>
+                    <p>
+                        This work was carried out at the University of Salford and was funded by the European Union Fifth Framework Programme.
+                        I built new equipment for combustion CVD. This was used to deposit thin films of various metal oxides on different substrates by passing appropriate chemical precursors through a flame.
+                    </p>
+                    <h3>The Software Challenge</h3>
+                    <p>
+                        Develop software to allow the user to control the gas flows (propane, oxygen and nitrogen) to the burner with sufficient accuracy an reproducibility to obtain consistent results. It was also important that the user could enter physically and chemically useful parameters such as fuel-oxygen ratio and total gas flow, rather than the less meaningful individual gas flows. To achieve this, digital mass flow controllers (MFCs) were used, connected by a RS-485 interface to a computer running software that I wrote in Visual Basic.
+                    </p>
+                    <h3>A Problem Encountered</h3>
+                    <p>
+                        Commands were sent to the MFCs through the interface buffer which then needed to be switched from send to receive in order to read the rely from the MFCs. This switching needed to occur a precise fraction of a millisecond after the software had sent the command, a delay too short to enable use of the normally available timer in Visual Basic.
+                    </p>
+                    <h3>The Solution I Found</h3>
+                    <p>
+                        I used Windows API calls to access the CPU clock, which had sufficient accuracy to allow the software to switch the interface buffer with the accuracy and precision required.
+                    </p>
+                    <cite>
+                        <span role="presentation">Reference:</span>Growth of Thin Films of Molybdenum and Tungsten Oxides by Combustion Chemical Vapour Deposition using Aqueous Precursor Solutions. M. J. Davis, G. Benito, D. W. Sheel, M. E. Pemble, Adv. Mater., Chem. Vap. Deposition, 2004, 10, 29.
+                    </cite>
+                </section>
+                <section>
+                    <h3>The Combustion CVD rig</h4>
+                    <figure>
+                        <img src="./img/CCVD-Rig.jpg" alt="The combustion CVD rig" Title="Combution CVD Rig" width="400">
+                        <img src="./img/CCVD-MFCs.jpg" alt="The combustion CVD rig" Title="Combution CVD Rig" width="400">
+                        <video autoplay loop src="./video/burner.mp4"></video>
+                        <figcaption>
+                            The combustion CVD rig showing the user input screen. Insets show the MFCs behind the gas control panel and a video of the flame and substrate carriage in operation.
+                        </figcaption>
+                    </figure>
+                </section>
+                <section>
+                    <h3>Spectroscopic Monitoring of a Chemical Reactor</h3>
+                    <h3>Introduction</h3>
+                    <p>
+                        This work was carried out at the University of Salford and was funded by the European Union BriteEuram Programme.
+                    </p>
+                    <p>
+                        A technique known as coherent anti-Stokes Raman scattering (CARS) was used to enable measurement of chemical species concentration at precise points in a hot reactor. The used a pair of high powered, pulsed lasers together with photodetectors and signal processing electronics, all interfaced to a computer.
+                    </p>
+                    <h3>The Software Challenge</h3>
+                    <p>
+                        Write software to both control the scanning of the laser wavelength and acquire the data from the signal processing electronics, ensuring that synchronisation between wavelength and signal was maintained.
+                    </p>
+                    <h3>A Problem Encountered</h3>
+                    <p>
+                        I encountered problems with the RS-232 interface used because the standard was poorly defined and communication between the different pieces of equipment did not work.
+                    </p>
+                    <h3>The Solution I Found</h3>
+                    <p>
+                    I used a breakout box on the RS-232 line to determine that a handshake line to one of the pieces of equipment needed to be crossed-over.
+                    </p>
+                    <cite>
+                        <span role="presentation">Reference:</span>In-Situ Monitoring of Atmospheric Pressure Tin Oxide CVD using Coherent anti-Stokes Raman Scattering. M. J. Davis, M. E. Pemble, J. Phys. IV France, 1999, 9, Pr8-49.
+                    </cite>
+                </section>
+                <section>
+                    <figure>
+                    <img src="./img/CARS-Rig.jpg" alt="The CARS system" title="CARS System" width="400">
+                    <img src="./img/CARS-laser-path.jpg" alt="The laser path through the reactor" title="Laser Path" width="400">
+                    <figcaption>
+                        The CARS system showing the lasers, detection module and signal processing electronics. The inset show the laser beam path through the reactor.
+                    </figcaption>
+                    </figure>
+                </section>
+                <section>           
+                    <h2>Real Time Panning of Panoramic Images</h2>
+                    <h3>Introduction</h3>
+                    <p>
+                        After a trip to the Grand Canyon and Northern Arizona, I had lots of panoramic images made by stitching together many individual photographs. I found that when trying to show to show these to friends and family the large aspect ratio meant to images lost their visual impression. While software is available to create a video that shows panning across a panoramic image, converting lots of images in this way can be time consuming and the resulting videos take up a lot of storage space.
+                    </p>   
+                    <h3>The Software Challenge</h3>
+                    <p>
+                        I wrote software in VB.NET to enable a slide show to be made and displayed, where any image with an aspect ratio greater than a certain value would be displayed as an image at full-height and then panned in real time.
+                    </p>
+                    <h3>A Problem Encountered</h3>
+                    <p>
+                        I found that panning of a full resolution image was too slow and jerky to be aesthetically acceptable.
+                    </p>
+                    <h3>The Solution I Found</h3>
+                    <p>
+                        I ran the code to produce the panning in a separate thread which I assigned a high priority. Additionally, obtaining the correct part of the image required for each frame, which is the slowest part of the process, was done in the time between frames, copying it to a temporary buffer. This buffer could then be quickly transferred to the screen at the correct frame time. Furthermore, API calls to the internal timer were made to ensure sufficient accuracy and reproducibility of frame timing in order to give smooth panning.
+                    </p>
+                </section>
+                <section>
+                    <figure>
+                    <img src="./img/Code-Snapshot.PNG" alt="Code Snippet" title="Code Snippet" width="400">
+                    <figcaption>
+                        A section of the code, showing the high priority thread, timing calls and frame buffer use.
+                    </figcaption>
+                    </figure>
+               </section> 
+            </article>
+            </main>
         <footer>
         </footer>
     </body>
