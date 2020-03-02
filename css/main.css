@@ -97,13 +97,18 @@ h3 {
 
 .my-portfolio {
 	display: grid;
-	grid-template-columns: 100%;
+	grid-template-columns: 100vw;
 	grid-template-rows: auto auto auto auto auto auto auto;
 }
 
 .my-portfolio section {
-	position: relative;
+	/* position: relative; */
 	margin: 16px;
+}
+
+.text-block {
+	line-height: 20px;
+	background-color: thistle;
 }
 
 .my-portfolio section:first-child {
@@ -112,19 +117,43 @@ h3 {
 
 .my-portfolio img {
 	display: block;
+	padding: 5px;
+	background-color: white;
 }
 
-#MFCs {
+#ccvd {
+	height: 800px;
+}
+#ccvd figure {
+	position: relative;
+	width: 95vw;
+	height: 77vw;
+	/* width: 930px; */
+	/* height: 720px; */
+}
+
+
+#ccvd-rig {
 	position: absolute;
-	width: 321px;
-	margin-left: 446px;
-	margin-top: -182px;
+	width:65%;
+	top: 15%;
+	left: 0;
+}
+
+#mfcs {
+	position: absolute;
+	width: 30%;
+	top: 50%;
+	left: 65%;
 }
 
 .my-portfolio video {
 	position: absolute;
-	margin-left: 446px;
-	margin-top: -580px;
+	width: 40%;
+	top: 5%;
+	left: 55%;
+	padding: 5px;
+	background-color: white;
 }
 
 .my-portfolio p {
