@@ -112,6 +112,10 @@ h3 {
 	background-color: thistle;
 }
 
+.fig-block {
+	background-color: lightblue;
+}
+
 .my-portfolio section:first-child {
 	justify-self: center;
 }
@@ -123,36 +127,34 @@ h3 {
 }
 
 #ccvd {   /* CCVD fig section */
-	height: 70vw;
+	height: 80vw;
 }
+
 #ccvd figure {		/* CCVD figure box */
 	position: relative;
-	width: 95%;
-	height: 95%;
-	/* width: 930px; */
-	/* height: 720px; */
-	background-color: lightblue;
+	width: 100%;
+	height: 100%;
 }
 
 #ccvd-rig {   /* CCVD-rig image */
 	position: absolute;
-	width: 65%;
-	top: 15%;
+	width: 75%;
+	top: 24%;
 	left: 0;
 }
 
 #mfcs {		/* the MFCs image */
 	position: absolute;
 	width: 32%;
-	top: 55%;
-	left: 58%;
+	top: 66%;
+	left: 67%;
 }
 
 .my-portfolio video {   /* burner head video */
 	position: absolute;
 	width: 35%;
-	top: 7%;
-	left: 50%;
+	top: 20%;
+	left: 60%;
 	padding: 5px;
 	background-color: white;
 }
@@ -170,12 +172,54 @@ h3 {
 @media screen and (min-width: 768px) {
 
 
+	
 
 }
 
 /* Desktop */
 @media screen and (min-width: 1200px) {
 
+	.my-portfolio {   /* grid container */
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto auto;
+	}
 
+	.my-portfolio *:nth-child(1) {
+		grid-column: 1 / span 2;
+		grid-row: 1;
+	}
 
+	.my-portfolio *:nth-child(2) {
+		grid-column: 1 / span 1;
+		grid-row: 2;
+	}
+	
+	.my-portfolio *:nth-child(3) {
+		grid-column: 2 / span 1;
+		grid-row: 2;
+	}
+	
+	.my-portfolio *:nth-child(4) {
+		grid-column: 1 / span 1;
+		grid-row: 3;
+	}
+
+	.my-portfolio *:nth-child(5) {
+		grid-column: 2 / span 1;
+		grid-row: 3;
+	}
+
+	.my-portfolio *:nth-child(6) {
+		grid-column: 1 / span 1;
+		grid-row: 4;
+	}
+
+	.my-portfolio *:nth-child(7) {
+		grid-column: 2 / span 1;
+		grid-row: 4;
+	}
+
+	#ccvd {   /* CCVD fig section */
+		height: 40vw;
+	}
 }
