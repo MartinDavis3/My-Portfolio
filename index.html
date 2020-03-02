@@ -12,18 +12,32 @@
     </head>
     <body>
         <header>
+            <h1>Martin J. Davis</h1>
+            <nav>
+                <!-- A div is used inside the nav here for use as the flexbox container with limited width so that the navigation elements line up with the content. -->
+                <!-- Note: Flexbox not really necessary here, but used to maintain consistency with index page and allow for future expansion. -->
+                <div role="presentation" id="flexbox-on-contact-page">
+                    <ul class="page-nav">
+                        <li class="page-links" >
+                            <a href=./index.html>Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
         <main>
             <article class="my-portfolio">
-                <section>
-                    <h1>My Portfolio</h1>
-                    <p id="after-heading1">A brief illustration of some of my work.</p>
-                </section>
+                <div role="presentation">
+                    <h2 id="top-heading">My Portfolio</h2>
+                    <p id="after-top-heading">A brief illustration of some of my work.</p>
+                </div>
                 <section class="text-block">
                     <h2>Combustion CVD</h2>
                     <h3>Introduction</h3>
                     <p>
                         This work was carried out at the University of Salford and was funded by the European Union Fifth Framework Programme.
+                    </p>
+                    <p>
                         I built new equipment for combustion CVD. This was used to deposit thin films of various metal oxides on different substrates by passing appropriate chemical precursors through a flame.
                     </p>
                     <h3>The Software Challenge</h3>
@@ -43,11 +57,11 @@
                     </cite>
                 </section>
                 <section class="fig-block" id="ccvd">
-                    <h3>The Combustion CVD Rig</h4>
+                    <h3>The Combustion CVD Rig</h3>
                     <figure>
                         <img id="ccvd-rig" src="./img/CCVD-Rig.jpg" alt="The combustion CVD rig" Title="Combution CVD Rig" width="400">
                         <img id="mfcs" src="./img/CCVD-MFCs.jpg" alt="The MFCs" Title="MFCs" width="400">
-                        <video autoplay loop src="./video/burner.mp4"></video>
+                        <video autoplay loop src="./video/burner.mp4" muted></video>
                         <figcaption>
                             The combustion CVD rig showing the user input screen. Insets show the MFCs behind the panel and a video of the flame and substrate carriage.
                         </figcaption>
@@ -119,6 +133,7 @@
             </article>
             </main>
         <footer>
+            Martin J. Davis - Portfolio
         </footer>
     </body>
 </html>

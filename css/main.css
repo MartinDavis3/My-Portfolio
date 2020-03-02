@@ -76,7 +76,33 @@ h1{
     padding-bottom: 4px;
 }
 
-h2{
+
+  /* Navigation */
+
+  nav {
+    height: auto;
+    background-color: rgb(255, 240, 103);
+}
+
+nav div {       /* this is used as a flexbox */
+    max-width: 1415px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+nav ul {       /* these are the flexbox items */
+    display: block;
+    height: auto;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+/* End navigation */
+
+
+h2 {
     font-family: "Prompt", "Arial", "sans-serif";
     font-size: 22px;
     font-weight: bolder;
@@ -85,6 +111,12 @@ h2{
     /* Need a lot of padding at the top to ensure heading is not
     obscured by navigation bar when moved to by section link */
     padding-top: 22px;
+}
+
+#top-heading {
+	font-size: 26px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 h3 {
@@ -104,7 +136,7 @@ h3 {
 }
 
 /* Targeting multiple tags and classes in grid */
-
+.my-portfolio div,
 .my-portfolio section {		/* grid items */
 	position: relative;
 	margin: 16px;
@@ -114,14 +146,6 @@ h3 {
 .text-block {
 	line-height: 20px;
 	background-color: thistle;
-}
-
-.fig-block {
-	/* background-color: lightblue; */
-}
-
-.my-portfolio section:first-child {
-	justify-self: center;
 }
 
 .my-portfolio img {
@@ -134,7 +158,8 @@ h3 {
 	margin-bottom: 16px;
 }
 
-#after-heading1 {
+#after-top-heading {
+	text-align: center;
 	font-size: 22px;
 	margin-top: 6px;
 }
