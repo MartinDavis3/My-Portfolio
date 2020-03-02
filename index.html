@@ -107,12 +107,12 @@
                         I ran the code to produce the panning in a separate thread which I assigned a high priority. Additionally, obtaining the correct part of the image required for each frame, which is the slowest part of the process, was done in the time between frames, copying it to a temporary buffer. This buffer could then be quickly transferred to the screen at the correct frame time. Furthermore, API calls to the internal timer were made to ensure sufficient accuracy and reproducibility of frame timing in order to give smooth panning.
                     </p>
                 </section>
-                <section class="fig-block">
+                <section class="fig-block" id="code-snip">
                     <h3>Code Snippet</h3>
                     <figure>
-                        <img src="./img/Code-Snapshot.PNG" alt="Code Snippet" title="Code Snippet" width="400">
+                        <img id="code-snip-img" src="./img/Code-Snapshot.PNG" alt="Code Snippet" title="Code Snippet" width="400">
                     <figcaption>
-                        A section of the code, showing the high priority thread, timing calls and frame buffer use.
+                        A section of the code, showing high priority thread, timing calls and frame buffer use.
                     </figcaption>
                     </figure>
                </section> 

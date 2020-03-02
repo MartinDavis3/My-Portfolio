@@ -198,6 +198,25 @@ h3 {
 	left: 0%;
 }
 
+/* Panning */
+
+#code-snip {   /* fig section */
+	height: 126vw;
+}
+
+#code-snip figure {		/* figure box */
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#code-snip-img {   /*  image */
+	position: absolute;
+	width: 100%;
+	top: 8%;
+	left: 0%;
+}
+
 /* Tablet */
 @media screen and (min-width: 768px) {
 
@@ -256,4 +275,9 @@ h3 {
 	#cars {   /* CARS fig section */
 		height: 43vw;
 	}
+
+	#code-snip {   /* Code fig section */
+		height: 63vw;
+	}
+	
 }
