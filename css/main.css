@@ -84,7 +84,7 @@ h2{
     margin-bottom: 11px;
     /* Need a lot of padding at the top to ensure heading is not
     obscured by navigation bar when moved to by section link */
-    padding-top: 72px;
+    padding-top: 22px;
 }
 
 h3 {
@@ -117,7 +117,7 @@ h3 {
 }
 
 .fig-block {
-	background-color: lightblue;
+	/* background-color: lightblue; */
 }
 
 .my-portfolio section:first-child {
@@ -132,6 +132,11 @@ h3 {
 
 .my-portfolio p {
 	margin-bottom: 16px;
+}
+
+#after-heading1 {
+	font-size: 22px;
+	margin-top: 6px;
 }
 
 .my-portfolio cite span {
@@ -249,12 +254,12 @@ h3 {
 	}
 	
 	.my-portfolio *:nth-child(4) {
-		grid-column: 1 / span 1;
+		grid-column: 2 / span 1;
 		grid-row: 3;
 	}
 
 	.my-portfolio *:nth-child(5) {
-		grid-column: 2 / span 1;
+		grid-column: 1 / span 1;
 		grid-row: 3;
 	}
 
